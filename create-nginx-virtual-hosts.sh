@@ -12,8 +12,8 @@ else
     # Check if OpenSSH Server is installed
     if ! dpkg -l | grep -q "openssh-server"; then
         echo "OpenSSH Server is not installed. Installing..."
-        sudo apt-get update
-        sudo apt-get install -y openssh-server
+        sudo apt-get update > /dev/null
+        sudo apt-get install -y openssh-server > /dev/null
     else
         echo "OpenSSH Server is already installed."
     fi
@@ -21,8 +21,8 @@ else
     # Check if Nginx is installed
     if ! dpkg -l | grep -q "nginx"; then
         echo "Nginx is not installed. Installing..."
-        sudo apt-get update
-        sudo apt-get install -y nginx
+        sudo apt-get update > /dev/null
+        sudo apt-get install -y nginx > /dev/null
     else
         echo "Nginx is already installed."
     fi
