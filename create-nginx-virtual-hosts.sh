@@ -80,6 +80,14 @@ else
     echo "Get ip"
     ip_address=$(hostname -I)
     echo "Success"
+    echo "Update /etc/issue and /etc/issue.net"
+    virt_hosts=$(ls -p -I default -m /etc/nginx/sites-enabled/)
+    sudo echo "Welcome to Ubuntu server" > /etc/issue
+    sudo echo "Local IPv4: \\4{enp0s3}" >> /etc/issue
+    sudo echo "Your available virtual hosts: ${virt_hosts}" >> /etc/issue
+    sudo echo "Welcome to Ubuntu server" > /etc/issue.net
+    sudo echo "Local IPv4: \\4{enp0s3}" >> /etc/issue.net
+    sudo echo "Your available virtual hosts: ${virt_hosts}" >> /etc/issue.net
     echo "Please add follow line to your hosts file"
     echo "${ip_address} ${args[@]}"
     echo "Usual Windows path: \"C:\\Windows\\System32\\drivers\\etc\\hosts\""
