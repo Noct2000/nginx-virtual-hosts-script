@@ -15,7 +15,7 @@ Before using this script, make sure you have Bash installed on your system. To c
 2. **Make the Script Executable**: If the script is not already executable, run the following command to make it executable:
 
    ```bash
-    sudo chmod +x create-nginx-virtual-hosts.sh
+   sudo chmod +x create-nginx-virtual-hosts.sh
    ```
 
 3. **Run the Script**: Execute the script with the desired virtual hostnames as command-line arguments. For example:
